@@ -1,0 +1,110 @@
+﻿@model NSDC.Assessor.BusinessObject.UserAccount.UserLogin
+@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Assessor App Admin Login</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="~/Content/assets/css/sb-admin.css" rel="stylesheet">
+    <link href="~/Content/assets/css/style.css" rel="stylesheet">
+</head>
+<body ng-app="MyApp" class="bg-dark">
+    <div ng-controller="LoginController" class="login-wrapper">
+        <div class="logo-wrapper text-center">
+            <a href="#"><img src="~/Content/assets/images/NSDC.png" /></a>
+        </div>
+        <div class="card card-login mx-auto mt-5 login-wrapper">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            @Html.TextBoxFor(m => Model.Username, new {
+                            @class = "form-control", @placeholder = "User Email Id",
+                            @required = "required" ,
+                            @autofocus = "autofocus"
+
+                       })
+                            @*<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">*@
+                            <label for="Username">Email address</label>
+                        </div>
+                        <div class="clearfix"></div>
+                        @Html.ValidationMessageFor(m => m.Username, null, new { @class = "err" })
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            @Html.PasswordFor(m => Model.Password, new {
+                           @class = "form-control",
+                           @placeholder = "Password",
+                           @required = "required"
+                       })
+
+                            @*<input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">*@
+                            <label for="Password">Password</label>
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Password, null, new { @class = "err" })
+                        @if (!string.IsNullOrEmpty(ViewBag.Error))
+                        {
+                            <div class="clearfix"></div>
+                            <span class="">@ViewBag.Error
+                                <br /></span>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me">
+                                Remember Password
+                            </label>
+                        </div>
+                    </div>
+                    @*<a class="btn btn-primary btn-block" ng-click="SaveLoginDetails()">Login</a>*@
+                    <input type="submit" id="btnLogin" class="btn btn-primary btn-block" value="Login">
+                </form>
+                <div class="text-center">
+                    @*<a class="d-block small mt-3" href="Register">Register an Account</a>*@
+                    <a class="d-block small" href="@Url.Action("ForgetPassword","Home")">Forgot Password?</a>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Password Reset Modal-->
+    @*<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="@Url.Action("Logout","Home")">Logout</a>
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <!-- Jquery-->
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- custom js-->
+    @*<script src="~/Content/assets/js/sb-admin.js"></script>*@
+</body>
+</html>

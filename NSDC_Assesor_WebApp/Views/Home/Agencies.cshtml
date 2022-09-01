@@ -1,0 +1,145 @@
+﻿@{
+    Layout = "~/Views/Shared/_AgenciesLayout.cshtml";
+    ViewBag.Title = "Manage Agency";
+}
+<script src="~/Scripts/Home/DashboardController.js"></script>
+<div id="main" >
+    <h2 class="page-header"><span>Home</span></h2>
+</div>
+<body id="page-top" ng-cloak>
+    <div id="content-wrapper" ng-controller="DashboardController">
+        <div class="container-fluid" >
+            <!-- Icon Cards-->
+            
+            <div class="row dashboard-stats">
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-3 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Assessor</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalAssessor}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageUserManagement","UserManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-5 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-list-ol"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Assessment</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalAssessment}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-6 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div class="mr-1 card-head">Completed Assessment </div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.Completed}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-7 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-hourglass"></i>
+                            </div>
+                            <div class="mr-1 card-head">Upcoming</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.Pending}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-8 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-list-ol"></i>
+                            </div>
+                            <div class="mr-1 card-head">Inprogress</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.Inprogress}}</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-9 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-hourglass"></i>
+                            </div>
+                            <div class="mr-1 card-head">Pending</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.PendingAssessment}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Area Chart Example-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    @*<i class="fas fa-chart-area"></i>*@
+                    Assessment Statistics
+                </div>
+                <div class="card-body">
+                    <canvas id="myAreaChart" width="100%" height="30"></canvas>
+                </div>
+                @*<div fusioncharts
+                     id="my-chart-id"
+                     width="100%"
+                     height="400"
+                     type="column2d"
+                     dataSource="{{myDataSource}}">
+                </div>*@
+                 <div fusioncharts
+                     width='1000'
+                     height='400'
+                     type='mscolumn2d'
+                     dataSource='{{myDataSource}}'>
+                </div>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+
+            <!-- DataTables Example -->
+                  </div>
+        <!-- /.container-fluid -->
+    </div>
+</body>

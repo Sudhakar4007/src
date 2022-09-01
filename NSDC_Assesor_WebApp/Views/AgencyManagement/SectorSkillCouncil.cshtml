@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "Manage SSC";
+}
+<script src="~/Scripts/AgencyManagement/SectorSkillCouncilController.js"></script>
+
+<div ng-app="app" ng-controller="SectorSkillCouncilController">
+
+    <div ng-show="!Isshown">
+        <h2 class="page-header"><span>Manage SSC</span></h2>
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-4">
+                        <label for="agencyAddress">Sector Name</label>
+                        <div class="">
+                            <select type="text" ng-disabled="isViewMode" id="sectorName" ng-model="Agency.RefSectorID" ng-options="value.ID as value.Name for (key, value) in SectorDDLList" class="form-control">
+                                <option value="">--Select --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="agencyName">Sector Skill Council Name</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="agencyName" only-Letters-Input maxlength="100" class="form-control" ng-model="Agency.Name" placeholder="Sector Skill Council Name" autofocus="autofocus">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <label for="inputEmail">Email address</label>
+                        <div>
+                            <input type="email" ng-disabled=" isViewMode" id="inputEmail" maxlength="100" class="form-control" ng-model="Agency.Email" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="mobile">Mobile</label>
+                        <div>
+                            <input type="text" id="mobile" ng-disabled="isViewMode" mobile maxlength="10" class="form-control" ng-model="Agency.Mobile" placeholder="Mobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group text-center">
+                <button class="btn btn-primary" ng-hide="isViewMode" ng-click="SaveAgency()">Save</button>
+                <button class="btn btn-danger" ng-click="Close()">Clear</button>
+                <a ng-click="exportData()" href="javascript:;" class="btn btn-primary">
+                    <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                </a>
+                @*<button class="btn btn-primary" ng-click="Upload()">Upload File</button>*@
+            </div>
+        </form>
+    </div>
+    <div ng-show="Isshown">
+        <h2 class="page-header"><span>Upload SSC</span></h2>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col-md-4">
+                    <div class="group">
+                        <label>Select File</label>
+                        <div class="clearfix"></div>
+                        <input type="file" id="fileUpload" name="file" class="inputMaterial" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <input type="button" class="btn btn-primary" ng-click="HideDiv()" value="Back" />
+            <button class="btn btn-primary" ng-hide="isViewMode" ng-click="UploadFile()">Upload</button>
+            <button class="btn btn-primary" ng-click="Closed()">Clear</button>
+            <input type="button" class="btn btn-primary" ng-click="DownloadFile('/DMS/Download/SSCManagement/Document_Sample_SSC.csv')" value="Download File Formate" />
+        </div>
+    </div>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        @*<div class="card-header">
+                <i class="fas fa-table"></i>
+                Data Table Example
+            </div>*@
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Sector Name</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in agencylist">
+                            <td>{{u.SectorName}}</td>
+                            <td>{{u.Name}}</td>
+                            @*<td>
+                                    <span dd-text-collapse dd-text-collapse-max-length="30" dd-text-collapse-text="{{ u.Address }}"></span>
+
+                                </td>*@
+                            <td>{{u.Email}}</td>
+                            <td>{{u.Mobile}}</td>
+                            @*<td>
+                                    {{u.NumberofAssessor}}
+
+                                </td>*@
+                            @*<td><a href="javascript:void(0)" title="Send Mail" ng-click="ResendMailforVerification(u.ID)" class="actn">Send</a></td>*@
+                            <td>
+                                <div ng-if="u.Status">
+                                    <a href="javascript:void(0)" ng-click="OperactionAgency(u.ID,'Inactive')" title="Click to Inactive">
+                                        <i class="fa fa-unlock-alt green" aria-hidden="true"> Active </i>
+                                    </a>
+                                </div>
+                                <div ng-if="!u.Status">
+                                    <a href="javascript:void(0)" ng-click="OperactionAgency(u.ID,'Active')" title="Click to Active"><i class="fa fa-lock red" aria-hidden="true"> Inactive</i></a>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" title="View" ng-click="Edit(u,'')" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0)" title="Edit" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+                                @*<a href='javascript:void(0);' ng-click="OperactionAgency(u.ID,'Delete')" title="Click to Delete" class="actn actn-del"><i class='fa fa-trash' aria-hidden='true'></i></a>*@
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>

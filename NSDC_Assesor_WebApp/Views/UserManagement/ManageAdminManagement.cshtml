@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Manage Admin";
+}
+
+<script src="~/Scripts/UserManagement/ManageAdminManagementController.js"></script>
+<h2 class="page-header"><span>Manage Admin</span></h2>
+<div ng-app="app" ng-controller="ManageAdminManagementController">
+    <div>
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                  
+                    <div class="col-md-4">
+                        <label for="Name">Name</label>
+                        <div>
+                            <input type="text" id="Name" ng-disabled="isViewMode" only-Letters-Input maxlength="100" class="form-control" ng-model="User.Name" placeholder="Name" required="required" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputEmail">Email address</label>
+                        <div>
+                            <input type="email" ng-disabled=" isViewMode" maxlength="200" id="inputEmail" class="form-control" ng-model="User.Email" placeholder="Email address" required="required">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="mobile">Mobile</label>
+                        <div>
+                            <input type="text" id="mobile" ng-disabled="isViewMode" mobile maxlength="10" class="form-control" ng-model="User.Mobile" placeholder="Mobile" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>                              
+            <div class="form-group text-center">
+                <button class="btn btn-primary" ng-hide="isViewMode" ng-click="SaveDetails()">Register</button>
+                <button class="btn btn-danger" ng-click="Close()">Clear</button>
+            </div>
+        </form>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Login Type</th>
+                            <th style="width:10%">Status</th>
+                            <th style="width:10%">Action</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Login Type</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in agencylist track by $index">
+                            <td>{{u.Name}}</td>
+                            <td>{{u.Email}}</td>
+                            <td>{{u.Mobile}}</td>
+                            <td>{{u.LoginType}}</td>
+                            <td>
+                                <div ng-if="u.Status">
+                                    <a href="javascript:void(0)" ng-click="OperactionAgency(u.ID,'Inactive')" title="Click to Inactive">
+                                        <i class="fa fa-unlock-alt green" aria-hidden="true"> Active </i>
+                                    </a>
+                                </div>
+                                <div ng-if="!u.Status">
+                                    <a href="javascript:void(0)" ng-click="OperactionAgency(u.ID,'Active')" title="Click to Active"><i class="fa fa-lock red" aria-hidden="true"> Inactive</i></a>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" title="View" ng-click="Edit(u,'')" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0)" title="Edit" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+                                @*<a href="javascript:void(0)" ng-click="OperactionAgency(u.ID,'Delete')" title="Click to Delete" class="actn actn-del"><i class='fa fa-trash' aria-hidden='true'></i></a>*@
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>

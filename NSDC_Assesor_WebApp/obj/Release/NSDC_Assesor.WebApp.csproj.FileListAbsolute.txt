@@ -1,0 +1,473 @@
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.rsp
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.rsp
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Managed.Core.targets
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.AppContext.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Console.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Compression.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.AccessControl.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Claims.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.ValueTuple.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.rsp
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\dotless.Core.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\FusionExport.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Glob.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\MySql.Data.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NDepend.Path.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\SuperSocket.ClientEngine.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Collections.Specialized.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.NameResolution.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Security.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Sockets.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Algorithms.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Encoding.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Primitives.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.X509Certificates.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebGrease.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebSocket4Net.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Dapper.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\netstandard.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.xml
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.pdb
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.App.config
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csprojAssemblyReference.cache
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CoreCompileInputs.cache
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CopyComplete
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.dll
+D:\NSDC_Assessor_App\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.rsp
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.rsp
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.AppContext.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Console.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Compression.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.AccessControl.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Claims.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.ValueTuple.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.rsp
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\dotless.Core.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\FusionExport.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Glob.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\MySql.Data.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NDepend.Path.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\SuperSocket.ClientEngine.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Collections.Specialized.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.NameResolution.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Security.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Sockets.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Algorithms.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Encoding.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Primitives.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebGrease.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebSocket4Net.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Dapper.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\netstandard.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.xml
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.pdb
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.App.config
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csprojAssemblyReference.cache
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CoreCompileInputs.cache
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CopyComplete
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.dll
+D:\Project\NSDC_Assessor\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.rsp
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.rsp
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.AppContext.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Console.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Compression.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.AccessControl.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Claims.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.ValueTuple.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.rsp
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\dotless.Core.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\FusionExport.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Glob.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\MySql.Data.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NDepend.Path.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\SuperSocket.ClientEngine.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Collections.Specialized.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.NameResolution.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Security.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Sockets.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Algorithms.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Encoding.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Primitives.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebGrease.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebSocket4Net.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Dapper.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\netstandard.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.xml
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.App.config
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csprojAssemblyReference.cache
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CoreCompileInputs.cache
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CopyComplete
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.dll
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.pdb
+D:\Project\Assessor_NSDC_170420149\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Data.Common.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assesor_WebApp.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.exe.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csc.rsp
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.exe.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\csi.rsp
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.Managed.Core.targets
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.AppContext.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Console.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Compression.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.IO.Pipes.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.AccessControl.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Claims.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.ValueTuple.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.exe.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\vbc.rsp
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\dotless.Core.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\FusionExport.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Glob.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\MySql.Data.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NDepend.Path.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\SuperSocket.ClientEngine.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Collections.Specialized.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.NameResolution.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Security.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Sockets.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Algorithms.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Encoding.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.Primitives.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Security.Cryptography.X509Certificates.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebGrease.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\WebSocket4Net.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Dapper.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\netstandard.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Data.Common.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.BusinessObject.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.BusinessOperation.dll.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC.Assessor.Utility.dll.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Antlr3.Runtime.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\DotNetZip.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\HtmlAgilityPack.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\Newtonsoft.Json.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Extensions.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Net.Http.Primitives.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.ValueTuple.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Optimization.Less.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Razor.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Deployment.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Webpages.Razor.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Helpers.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\System.Web.Mvc.xml
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.pdb
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\bin\NSDC_Assessor.DataAccessLayer.dll.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.App.config
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csprojAssemblyReference.cache
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CoreCompileInputs.cache
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor.WebApp.csproj.CopyComplete
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.dll
+D:\CHANDAN KUMAR\Assessor Project\trunk\Coding\Development\src\NSDC_Assesor_WebApp\obj\Release\NSDC_Assesor_WebApp.pdb

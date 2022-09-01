@@ -1,0 +1,211 @@
+﻿
+@{
+    ViewBag.Title = "Manage Agency";
+}
+@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+
+
+    }
+}
+<script src="~/Scripts/AgencyManagement/ManageAgencyController.js"></script>
+
+<div ng-app="app" ng-controller="ManageAgencyController">
+
+    <div ng-show="!Isshown">
+        <h2 class="page-header"><span>Manage Agency</span></h2>
+        <input hidden type="text" id="logintype" name="name" value="@(info.LoginType)" />
+        <input hidden type="text" id="id" name="id" value="@(info.RefSSCID)" />
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                    @*<div class="col-md-2"></div>*@
+                    <div class="col-md-4">
+                        <label for="refsscid">SSC Name</label>
+                        <div>
+                            @if (info.LoginType.ToUpper() == "SSC")
+                            {
+
+                                <select id="refsscid" class="form-control" ng-disabled="isViewMode" ng-model="Agency.RefSSCID">
+                                    <option ng-repeat="value in SSCList track by $index" value="{{value.ID}}">{{value.Name}}</option>
+                                </select>
+
+                            }
+                            else
+                            {
+                                <select id="refsscid" class="form-control" ng-disabled="isViewMode" ng-model="Agency.RefSSCID" ng-options="value.ID as value.Name for (key, value) in SSCList">
+                                    <option value="">-- Select --</option>
+                                </select>
+                            }
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="agencyName">Agency Name</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="agencyName" class="form-control" ng-model="Agency.Name" placeholder="Agency Name" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="agencyAddress">Agency Address</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="agencyAddress" maxlength="200" class="form-control" ng-model="Agency.Address" placeholder="Agency Address" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    @*<div class="col-md-2"></div>*@
+                    <div class="col-md-4">
+                        <label for="inputEmail">Email address</label>
+                        <div>
+                            <input type="email" ng-disabled=" isViewMode" id="inputEmail" maxlength="100" class="form-control" ng-model="Agency.Email" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="mobile">Mobile</label>
+                        <div>
+                            <input type="text" id="mobile" ng-disabled="isViewMode" mobile maxlength="10" class="form-control" ng-model="Agency.Mobile" placeholder="Mobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group text-center">
+                <button class="btn btn-primary" ng-show="Logintype1=='SUPERADMIN'?true:false" ng-click="SaveAgency()">Save</button>
+                <button class="btn btn-danger" ng-click="Close()">Clear</button>
+                <a ng-click="exportData()" href="javascript:;" class="btn btn-primary">
+                    <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                </a>
+                <button class="btn btn-primary" ng-click="Search(Agency.RefSSCID,Agency.Name,Agency.Address,Agency.Email,Agency.Mobile)">Search</button>
+                <button class="btn btn-primary" ng-show="Logintype1=='SUPERADMIN'?true:false" ng-click="Upload()">Upload File</button>
+            </div>
+        </form>
+    </div>
+    <div ng-show="Isshown">
+        <h2 class="page-header"><span>Upload Agency</span></h2>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col-md-4">
+                    <div class="group">
+                        <label>Select File</label>
+                        <div class="clearfix"></div>
+                        <input type="file" id="fileUpload" name="file" class="inputMaterial" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <input type="button" class="btn btn-primary" ng-click="HideDiv()" value="Back" />
+            <button class="btn btn-primary" ng-hide="isViewMode" ng-click="UploadFile()">Upload</button>
+            <button class="btn btn-primary" ng-click="Closed()">Clear</button>
+            <input type="button" class="btn btn-primary" ng-click="DownloadFile('/DMS/Download/AgencyManagement/Document_Sample_Agency.csv')" value="Download File Formate" />
+        </div>
+    </div>
+    <div class="modal fade" id="assessorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Write reason for block/unblock.</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="col-md-8">
+                    <label for="Reason">Reason</label>
+                    <div>
+                        <input type="text" id="Reason" only-Letters-Input maxlength="100" class="form-control" ng-model="UserDetails.Reason" placeholder="Reason" required autofocus="autofocus">
+                    </div>
+                </div>
+                @*<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>*@
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" ng-hide="isModalHide" ng-click="SaveUserDetals()">Save</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        @*<div class="card-header">
+                <i class="fas fa-table"></i>
+                Data Table Example
+            </div>*@
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="tblAgency" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            @*<th>SSC Name</th>*@
+                            <th ng-hide="Logintype1!='SUPERADMIN'?true:false"><input type="checkbox"  ng-click="toggleAll()" ng-model="selectedAll"/>Select all</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Number of Assessor</th>
+                            @*<th>Send Mail</th>*@
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in agencylist">
+                            @*<td>{{u.SSCName}}</td>*@
+                            <td ng-hide="Logintype1!='SUPERADMIN'?true:false"><input type="checkbox" name="cbAgency" id="cb_{{u.UserId}}" class="checkagency" ng-model="u.Selected" value="{{u.ID}}" ng-click="SelectAgency(u.UserId)"></td>
+                            <td>{{u.Name}}</td>
+                            <td>
+                                <span dd-text-collapse dd-text-collapse-max-length="30" dd-text-collapse-text="{{ u.Address }}"></span>
+
+                            </td>
+                            <td>{{u.Email}}</td>
+                            <td>{{u.Mobile}}</td>
+                            <td>
+                                {{u.NumberofAssessor}}
+
+                            </td>
+                            @*<td><a href="javascript:void(0)" title="Send Mail" ng-click="AgencyCreationMail(u.ID)" class="actn">Send</a></td>*@
+                            <td>
+                                <div ng-if="u.Status">
+                                    <a href='#' ng-click="OperactionAgency(u.ID,'Inactive')" title="Click to Inactive">
+                                        <i class="fa fa-unlock-alt green" aria-hidden="true"> Active </i>
+                                    </a>
+                                </div>
+                                <div ng-if="!u.Status">
+                                    <a href='#' ng-click="OperactionAgency(u.ID,'Active')" title="Click to Active"><i class="fa fa-lock red" aria-hidden="true"> Inactive</i></a>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" title="View" ng-click="Edit(u,'')" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="javascript:void(0)" title="Edit" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+                                <a href='javascript:void(0);' ng-click="OperactionAgency(u.ID,'Delete')" title="Click to Delete" class="actn actn-del"><i class='fa fa-trash' aria-hidden='true'></i></a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group text-center" ng-show="Logintype=='SUPERADMIN'?true:false">
+        <button class="btn btn-primary" ng-hide="isModalHide" ng-click="SendMail()">Send</button>
+    </div>
+    
+</div>

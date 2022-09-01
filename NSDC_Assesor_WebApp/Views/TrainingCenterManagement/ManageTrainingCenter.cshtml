@@ -1,0 +1,192 @@
+﻿
+@{
+    ViewBag.Title = "Manage Training Center";
+}
+<script src="~/Scripts/TrainingCenterManagement/ManageTrainingCenterController.js"></script>
+
+<div ng-app="app" ng-controller="ManageTrainingCenterController">
+    <div ng-show="!Isshown">
+        <h2 class="page-header"><span>Manage Training Center</span></h2>
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <label for="RefTPID">Training Partner</label>
+                        <div class="">
+                            <select id="RefTPID" class="form-control" ng-disabled="isViewMode" ng-model="Agency.RefTPID" required="required" ng-options="value.ID as value.Name for (key, value) in TrainingPartnerList">
+                                <option value="">--Select --</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="RefStateID">State Name</label>
+                        <div class="">
+                            <select id="RefStateID" class="form-control" ng-disabled="isViewMode" ng-model="Agency.RefStateID" ng-change="BindDistrictDropdown(Agency.RefStateID)" required="required" ng-options="value.ID as value.Name for (key, value) in StateList">
+                                <option value="">--Select --</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="RefDistrictID">District Name</label>
+                        <div class="">
+                            <select id="RefDistrictID" class="form-control" ng-disabled="isViewMode" ng-model="Agency.RefDistrictID" required="required" ng-options="value.ID as value.Name for (key, value) in DistrictList">
+                                <option value="">--Select --</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <label for="TCName">Training Center Name</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="TCName" only-Letters-Input maxlength="100" class="form-control" ng-model="Agency.TCName" placeholder="Training Center Name" required="required" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="SCCode">Center ID</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="SCCode" mobile class="form-control" ng-model="Agency.SCCode" placeholder="Center ID" required="required" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="Latitude">Latitude</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="Latitude" maxlength="100" class="form-control" ng-model="Agency.Latitude" placeholder="Latitude" required="required" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <label for="Longitude">Longitude</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="Longitude" class="form-control" ng-model="Agency.Longitude" placeholder="Longitude" required="required" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="TCAddress">Training Center Address</label>
+                        <div class="">
+                            <textarea type="text" ng-disabled="isViewMode" id="TCAddress" only-Letters-Input maxlength="200" class="form-control" ng-model="Agency.TCAddress" placeholder="Training Center Address" required="required" autofocus="autofocus"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-primary" ng-hide="isViewMode" ng-click="SaveDetails()">Save</button>
+                        <button class="btn btn-danger" ng-click="Closed()">Clear</button>
+                        <a ng-click="exportData()" href="javascript:;" class="btn btn-primary">
+                            <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                        </a>
+                        <button class="btn btn-primary" ng-click="Upload()">Upload File</button>
+                    </div>
+</form>
+    </div>
+    <div ng-show="Isshown">
+        <h2 class="page-header"><span>Upload Training Center</span></h2>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col-md-4">
+                    <div class="group">
+                        <label>Select File</label>
+                        <div class="clearfix"></div>
+                        <input type="file" id="fileUpload" name="file" class="inputMaterial" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <input type="button" class="btn btn-primary" ng-click="HideDiv()" value="Back" />
+            <button class="btn btn-primary" ng-hide="isViewMode" ng-click="UploadFile()">Upload</button>
+            <button class="btn btn-primary" ng-click="Close()">Clear</button>
+            <input type="button" class="btn btn-primary" ng-click="DownloadFile('/DMS/Download/TrainingCenter/Document_Sample_TrainingCenter.csv')" value="Download File Formate" />
+        </div>
+    </div>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        @*<div class="card-header">
+                <i class="fas fa-table"></i>
+                Data Table Example
+            </div>*@
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Training Partner Name</th>
+                            <th>State Name</th>
+                            <th>District Name</th>
+                            <th>Training Center Name</th>
+                            <th>CenterID</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                            <th>Training Center Address</th>
+                            <th style="width:10%">Status</th>
+                            <th style="width:10%">Action</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Training Partner Name</th>
+                            <th>State Name</th>
+                            <th>District Name</th>
+                            <th>Training Center Name</th>
+                            <th>CenterID</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                            <th>Training Center Address</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in agencylist">
+                            <td>{{u.TPName}}</td>
+                            <td>{{u.StateName}}</td>
+                            <td>{{u.DistrictName}}</td>
+                            <td>{{u.TCName}}</td>
+                            <td>{{u.SCCode}}</td>
+                            <td>{{u.Latitude}}</td>
+                            <td>{{u.Longitude}}</td>
+                            <td>
+                                <span dd-text-collapse dd-text-collapse-max-length="30" dd-text-collapse-text="{{ u.TCAddress }}"></span>
+                            </td>
+                            <td>
+                                <div ng-if="u.Status">
+                                    <a href='#' ng-click="OperactionAgency(u.ID,'Inactive')" title="Click to Inactive">
+                                        <i class="fa fa-unlock-alt green" aria-hidden="true"> Active </i>
+                                    </a>
+                                </div>
+                                <div ng-if="!u.Status">
+                                    <a href='#' ng-click="OperactionAgency(u.ID,'Active')" title="Click to Active"><i class="fa fa-lock red" aria-hidden="true"> Inactive</i></a>
+                                </div>
+                            </td>
+                            <td>
+                                <a href='#' title="View" ng-click="Edit(u,'')" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href='#' title="Edit" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+
+                                @*<a href='javascript:void(0);' ng-click="OperactionAgency(u.ID,'Delete')" title="Click to Delete" class="actn actn-del"><i class='fa fa-trash' aria-hidden='true'></i></a>*@
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

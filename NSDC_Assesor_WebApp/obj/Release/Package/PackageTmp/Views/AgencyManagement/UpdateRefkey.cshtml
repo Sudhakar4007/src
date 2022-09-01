@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Update Assessment";
+}
+
+<script src="~/Scripts/AgencyManagement/UpdateRefKeyController.js"></script>
+<h2 class="page-header"><span>Update RefKey</span></h2>
+<div ng-app="app" ng-controller="UpdateRefKeyController">
+
+    <div>
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <label for="BatchName">Assessor Email</label>
+                        <div>
+                            <input type="text" ng-disabled="isViewMode || isViewMode1" id="Email" class="form-control" ng-model="Agency.Email" placeholder="Assessor Email" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="RefKey">Reference Key</label>
+                        <div>
+                            <input type="text" ng-disabled="isViewMode" id="RefKey" class="form-control" ng-model="Agency.RefKey" autofocus="autofocus">
+
+                        </div>
+                    </div>  
+                    
+                </div>
+                </div>          
+
+            <div class="form-group text-center">
+                <button class="btn btn-primary" ng-hide="isViewMode" ng-click="SaveDetails()">Save</button>
+                <button class="btn btn-danger" ng-click="Close()">Clear</button>
+            </div>
+        </form>
+    </div>
+    <!-- DataTables Example -->
+    <div class="card mb-3">        
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>RefKey</th>                                               
+                            <th style="width:10%">Action</th>
+                        </tr>
+                    </thead>                  
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in updateEndStatuslist">
+                            <td>{{u.Email}}</td>
+                            <td>{{u.RefKey}}</td>                          
+                            <td>
+                                <a href='#' title="Edit" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

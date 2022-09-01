@@ -1,0 +1,44 @@
+/* line 1, ../../source/scss/ng-img-crop.scss */
+img-crop {
+    width: 48%;
+    height: 45%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    border: 1px solid #ccc;
+    margin-right: 4%;
+}
+/* line 7, ../../source/scss/ng-img-crop.scss */
+img-crop canvas {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  /* mobile webkit */
+}
+
+.crop-result{
+    width:48%;
+    height:45%;
+    float:right;
+    border: 1px solid #ccc;
+    text-align:center;
+}
+.crop-done{
+    width:100%;
+    display:inline-block;
+    margin-top:10px;
+}
+.preview-wraper{
+   width: 200px;
+height: 200px;
+display: inline-block;
+border-radius: 50%;
+border: 3px solid #89d6e7;
+text-align: center;
+overflow: hidden;
+margin-top:5px;
+}

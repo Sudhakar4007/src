@@ -1,0 +1,258 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+<script src="~/Scripts/Home/DashboardController.js"></script>
+<body id="page-top" ng-cloak>
+    <div id="content-wrapper" ng-cloak ng-controller="DashboardController">
+        <div class="container-fluid">
+            <!-- Icon Cards-->
+            <div class="row dashboard-stats">
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-1 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-building"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total SSC</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalSSC}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAgency","AgencyManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-2 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Agency</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalAgency}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageUserManagement","UserManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-3 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-handshake"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Assessor</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalAssessor}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageTrainingPartner","TrainingPartnerManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-4 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-building"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Training Center</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalTrainingCenter}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageTrainingCenter","TrainingCenterManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+
+            </div>
+            <div class="row dashboard-stats">
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-5 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-list-ol"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Assessment</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalAssessment}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-6 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div class="mr-1 card-head">Completed</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.Completed}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-7 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-hourglass"></i>
+                            </div>
+                            <div class="mr-1 card-head">Upcoming</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.Pending}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-8 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-list-ol"></i>
+                            </div>
+                            <div class="mr-1 card-head">Inprogress</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.Inprogress}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAssessment","AssessmentManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-9 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="far fa-building"></i>
+                            </div>
+                            <div class="mr-1 card-head">Pending</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.PendingAssessment}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageAgency","AgencyManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white card-10 o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="mr-1 card-head">Total Training Partner</div>
+                            <div class="card-head text-right dashboard-counts">{{agencylist.TotalTrainingPartner}}</div>
+                        </div>
+                        @*<a class="card-footer text-white clearfix z-1" href="@Url.Action("ManageUserManagement","UserManagement")">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>*@
+                    </div>
+                </div>
+
+            </div>
+            <!-- Area Chart Example-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    @*<i class="fas fa-chart-area"></i>*@
+                    Assessment Statistics
+                </div>
+                @*<fusioncharts width="100%"
+                              height="400"
+                              type="mscolumn2d"
+                              datasource="{{myDataSource}}">
+                </fusioncharts>*@
+                <div fusioncharts
+                     width="100%"
+                     height='400'
+                     type='mscolumn2d'
+                     dataSource='{{myDataSource}}'>
+                </div>
+
+
+            </div>
+
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    Upcoming Assessment
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" datatable="ng" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Partner Name</th>
+                                    <th>Center Name</th>
+                                    <th>Batch Name</th>
+                                    <th>Sc Agency Name</th>
+                                    <th>Assessor Name</th>
+                                    <th>Upcoming Assessment Date</th>
+                                </tr>
+                            </thead>
+                            @*<tfoot>
+                                <tr>
+                                    <th>Partner Name</th>
+                                    <th>Center Name</th>
+                                    <th>Batch Name</th>
+                                    <th>Sc Agency Name</th>
+                                    <th>Assessor Name</th>
+                                    <th>Upcoming Assessment Date</th>
+                                </tr>
+                            </tfoot>*@
+                            <tbody>
+                                <tr class="ng-cloak" ng-repeat="u in AssessmentList">
+                                    <td>{{u.PartnerName}}</td>
+                                    <td>{{u.CentreName}}</td>
+                                    <td>{{u.BatchName}}</td>
+                                    <td>{{u.SCAgencyName}}</td>
+                                    <td>{{u.AssessorName}}</td>
+                                    <td>{{u.AssessmentDate}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+</body>
+ 
+

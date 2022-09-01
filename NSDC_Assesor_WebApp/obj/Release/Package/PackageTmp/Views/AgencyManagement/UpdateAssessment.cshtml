@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Update Assessment";
+}
+
+<script src="~/Scripts/AgencyManagement/UpdateAssessmentController.js"></script>
+<h2 class="page-header"><span>Update Assessment</span></h2>
+<div ng-app="app" ng-controller="UpdateAssessmentController">
+
+    <div>
+        <form>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <label for="StateId">Assessment Date</label>
+                        <div class="">
+                            <input id="StateId" class="form-control" ng-disabled="isViewMode" ng-model="Agency.PreferedAssessmentDate" placeholder="Assessment Date"  />
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="Latitude">Latitude</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="DistrictName" class="form-control" ng-model="Agency.Latitude" placeholder="Latitude" autofocus="autofocus">
+
+                        </div>
+                    </div>  
+                    
+                </div>
+                </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <label for="Longitude">Longitude</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode" id="Longitude" class="form-control" ng-model="Agency.Longitude" placeholder="Longitude" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="BatchName">Batch Name</label>
+                        <div class="">
+                            <input type="text" ng-disabled="isViewMode || isViewMode1" id="BatchName" class="form-control" ng-model="Agency.BatchName" placeholder="Batch Name" autofocus="autofocus">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group text-center">
+                <button class="btn btn-primary" ng-hide="isViewMode" ng-click="SaveDetails()">Save</button>
+                <button class="btn btn-danger" ng-click="Close()">Clear</button>
+            </div>
+        </form>
+    </div>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        @*<div class="card-header">
+                <i class="fas fa-table"></i>
+                Data Table Example
+            </div>*@
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Assessment Date</th>
+                            <th>Batch Name</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>                           
+                            <th style="width:10%">Action</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Assessment Date</th>
+                            <th>Batch Name</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>                            
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in updateAssessmentlist">
+                            <td>{{u.PreferedAssessmentDate}}</td>
+                            <td>{{u.BatchName}}</td>
+                            <td>{{u.Latitude}}</td>
+                            <td>{{u.Longitude}}</td>                          
+                            <td>
+                                <a href='#' title="View" ng-click="Edit(u,'')" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href='#' title="Edit" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+
+                                @*<a href='javascript:void(0);' ng-click="OperactionAgency(u.ID,'Delete')" title="Click to Delete" class="actn actn-del"><i class='fa fa-trash' aria-hidden='true'></i></a>*@
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

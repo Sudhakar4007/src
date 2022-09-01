@@ -1,0 +1,79 @@
+﻿@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+    ViewBag.Title = "End All Started Assessment";
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+        if (info.LoginType == eLoginType.AGENCIES.ToString())
+        {
+            Layout = "~/Views/Shared/_AgenciesLayout.cshtml";
+        }
+        else if (info.LoginType == eLoginType.SSC.ToString())
+        {
+            Layout = "~/Views/Shared/_SSCLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+
+
+<script src="~/Scripts/AssessmentManagement/PendingEndAssessment.js"></script>
+<div id="main" ng-controller="PendingEndAssessmentController">
+    <h2 class="page-header"><span>End All Started Assessment</span></h2>
+    <input hidden type="text" id="logintype" name="name" value="@(info.LoginType)" />
+    <form>
+        <div class="form-group text-center">
+            <button class="btn btn-primary" ng-click="SaveStartedAssessment()">Save End Assessment</button>
+        </div>
+    </form>
+    <div class="card mb-3">
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th ng-hide="Logintype1!='SUPERADMIN'?true:false">Select</th>
+                            <th>Batch Name</th>
+                            <th>Prefered Assessment Date </th>
+                            <th>Prefered Assessment End Date </th>
+                            <th>Start Assessment Date</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="item in  StartedAssessment">
+                            <td ng-hide="Logintype1!='SUPERADMIN'?true:false"><input type="checkbox" name="cbAgency" id="cb_{{item.Id}}" class="checkagency" ng-model="item.Selected" value="{{item.Id}}" ng-click="SelectAgency(item.Id)"></td>
+                            <td>{{item.BatchName}}</td>
+                            <td>{{item.PreferedAssessmentDate}}</td>
+                            <td>{{item.PrefAssessmentEndDate}}</td>
+                            <td>{{item.StartAssessmentDate}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group text-center" ng-show="Logintype1=='SUPERADMIN'?true:false">
+        <button class="btn btn-primary" ng-click="EndOngoingAssessment()">End Assessment</button>
+    </div>
+</div>
+
+
+

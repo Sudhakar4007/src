@@ -1,0 +1,95 @@
+﻿@model NSDC.Assessor.BusinessObject.UserAccount.ActiveUserAccount
+@{
+    Layout = null;
+    ViewBag.Title = "ActiveUserAccount";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Admin - Login</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="~/Content/assets/css/sb-admin.css" rel="stylesheet">
+    <link href="~/Content/assets/css/style.css" rel="stylesheet">
+    <link href="/Content/assets/css/Alertify/alertify.css" rel="stylesheet" />
+
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <script src="~/Scripts/angular-loader.js"></script>
+    <script src="~/Content/Angular/App/App.js"></script>
+    <script src="~/Scripts/alertify.js"></script>
+    <script src="~/Scripts/alertify.min.js"></script>
+    <script src="~/Content/assets/js/jquery.alphanum.js"></script>
+    <script src="~/Content/assets/js/jquery.numeric.js"></script>
+    <script src="~/Content/assets/js/TextValidation.js"></script>
+</head>
+<body ng-app="app" class="bg-dark">
+    <div class="login-wrapper">
+        <div class="logo-wrapper text-center">
+            <a href="#"><img src="~/Content/assets/images/NSDC.png" /></a>
+        </div>
+        <div class="card card-login mx-auto mt-5 login-wrapper">
+            <div class="card-header" style="float:right">Enter New Password</div>
+            <div class="card-body">
+                @*<form method="post">*@
+                @using(Html.BeginForm("UserActivationLink", "Home", FormMethod.Post)){
+                <div class="login-fields">
+                    @Html.HiddenFor(m => Model.UserId)
+
+                    <div id="btnGroup">
+                        <div class="input-group ext-mrgn">
+                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                            @Html.PasswordFor(m => Model.Password, new { @class = "form-control ext-height", @type = "password", @placeholder = "New Password" })
+                            @Html.ValidationMessageFor(m => m.Password, null, new { @class = "err" })
+                        </div>
+                        <div class="input-group ext-mrgn">
+                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                            @Html.PasswordFor(m => Model.ConfirmPassword, new { @class = "form-control ext-height", @type = "password", @placeholder = "Confirm Password" })
+                            @*@Html.HiddenFor(m => m.PasswordMD5)*@
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword, null, new { @class = "err" })
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" id="btnSubmit" value="UserActivationLink" class="dsh-btns-green">
+                            <input type="reset" id="btnReset" value="Reset" class="dsh-btns-black">
+
+                        </div>
+
+                    </div>
+                </div>
+                if (string.IsNullOrEmpty(ViewBag.Success))
+                {
+                    <div class="password-plcy activation-passPlcy text-left bg-info">
+                        <span class="plcy-hdng text-center">Password Policy :</span>
+                        <ul>
+                            <li><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> Atleast 1 small-case letter.</li>
+                            <li><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> Atleast 1 Capital letter.</li>
+                            <li><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> Atleast 1 Digit.</li>
+                            <li><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> Atleast 1 Special character.</li>
+                            <li><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> Length should be between 6-24 characters.</li>
+                        </ul>
+                    </div>
+                }
+                }
+                @*</form>*@
+                <div class="text-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery-->
+    @*<script src="~/Content/assets/js/jquery.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+        <!-- custom js-->
+        <script src="~/Content/assets/js/sb-admin.js"></script>*@
+</body>
+</html>

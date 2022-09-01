@@ -1,0 +1,272 @@
+﻿@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+    ViewBag.Title = "AssessmentReport";
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+        if (info.LoginType == eLoginType.AGENCIES.ToString())
+        {
+            Layout = "~/Views/Shared/_AgenciesLayout.cshtml";
+        }
+        else if (info.LoginType == eLoginType.SSC.ToString())
+        {
+            Layout = "~/Views/Shared/_SSCLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+
+@*<script src="~/Scripts/AssessmentManagement/rptAssessment.js"></script>*@
+<script src="~/Areas/Report/Script/PendingAssessmentReportController.js"></script>
+<div id="main"  ng-controller="PendingAssessmentReportController">
+    <h2 class="page-header" ng-show="!modal1 || isHide"><span>Pending Assessment Report</span></h2>
+    <form ng-show="!modal1 || isHide">
+        @*<div class="form-group">
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="RefSectorID">Sector Name</label>
+                    <div>
+                        <select id="RefSectorID" class="form-control" ng-model="Agency.RefSectorID" ng-change="BindJobRoleDropdown(Agency.RefSectorID)" ng-options="value.ID as value.Name for (key, value) in SectorList">
+                            <option style="display:none" value="">--Select --</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="RefJobRoleID">Job Role</label>
+                    <div class="">
+                        <select id="RefJobRoleID" class="form-control" ng-model="Agency.RefJobRoleID" ng-options="value.ID as value.Name for (key, value) in JobRoleList">
+                            <option value="">--Select --</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="RefStateID">State Name</label>
+                    <div class="">
+                        <select id="RefStateID" class="form-control" ng-model="Agency.RefStateID" ng-change="BindDistrictDropdown(Agency.RefStateID)" ng-options="value.ID as value.Name for (key, value) in StateList">
+                            <option value="">--Select --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="RefDistrictID">District Name</label>
+                    <div class="">
+                        <select id="RefDistrictID" class="form-control" ng-model="Agency.RefDistrictID" ng-change="BindTrainingCenterDropdown(Agency.RefDistrictID)" ng-options="value.ID as value.Name for (key, value) in DistrictList">
+                            <option value="">--Select --</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="RefTCID">Training Center Name</label>
+                    <div class="">
+                        <select id="RefTCID" class="form-control" ng-model="Agency.RefTCID" ng-options="value.ID as value.Name for (key, value) in TCList">
+                            <option value="">--Select --</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="RefAgencyID">Agency Name</label>
+                    <div class="">
+                        <select id="RefAgencyID" class="form-control" ng-model="Agency.RefAgencyID" ng-change="BindAssessorDropdown(Agency.RefAgencyID)" ng-options="value.ID as value.Name for (key, value) in AgencyList">
+                            <option value="">--Select --</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="RefAssessorID">Assessor Name</label>
+                    <div class="">
+                        <select id="RefAssessorID" class="form-control" ng-model="Agency.RefAssessorID" ng-options="value.ID as value.Name for (key, value) in AssessorList">
+                            <option value="">--Select --</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-primary" ng-click="Search(Agency.RefSectorID,Agency.RefJobRoleID,Agency.RefStateID,Agency.RefDistrictID,Agency.RefTCID,Agency.RefAgencyID,Agency.RefAssessorID)">Search</button>
+            <button class="btn btn-danger" ng-click="Close()">Clear</button>
+            <a ng-click="exportData()" href="javascript:;" class="btn btn-primary">
+               <i class="fas  fa-file-excel" aria-hidden="true"></i>
+            </a>
+        </div>*@
+    </form>
+
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+
+        <div class="card-body" ng-show="!modal1">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                             <th>Batch Name</th>
+                            <th>Assessment Date </th>
+                            <th>Agency Name</th>
+                            <th>Assessor Name</th>
+                            <th>Partner Name</th>
+                            <th>Centre Name </th>
+                            <th>View Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="item in  AssessmentList">
+                            <td>{{item.BatchName}}</td>
+                            <td>{{item.PreferedAssessmentDate}}</td>
+                            <td>{{item.SCAgencyName}}</td>
+                            <td>{{item.AssessorName}}</td>
+                            <td>{{item.PartnerName}}</td>
+                            <td>{{item.CentreName}}</td>
+                            <td><a href="javascript:void(0)" title="View Details" data-target="#modal1" ng-click="Edit(item)" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a></td>                       
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div ng-show="modal1">
+            <div id="modal1" ng-hide="isHide">
+                @*<h2 class="page-header"><span>Assessment Details</span></h2>*@
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <h2 class="page-header">
+                            <span>Assessment Details</span>
+                            @*<a class="btn btn-primary back-button" href="@Url.Action("PendingAssessmentReport","AssessmentReport")">Back</a>*@
+                            <a class="btn btn-primary back-button" ng-click="HideDiv()">Back</a>
+                            <a ng-click="saveFile()" href="javascript:;" class="btn btn-primary back-button">
+                                <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                            </a>
+                        </h2>
+                       
+                        <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Batch Name</th>
+                                    <th>Batch Start Date </th>
+                                    <th>Batch EndDate </th>
+                                    <th>Prefered Assessment Date </th>
+                                    <th>Job Role </th>
+                                    <th>Job Role Sector Type</th>
+                                    <th>Sector Name </th>
+                                    <th>Training Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ng-cloak" ng-repeat="u in assessmentDetailList track by $index">
+                                    <td>{{u.BatchName}}</td>
+                                    <td>{{u.BatchStartDate}}</td>
+                                    <td>{{u.BatchEndDate}}</td>
+                                    <td>{{u.PreferedAssessmentDate}}</td>
+                                    <td>{{u.JobRole}}</td>
+                                    <td>{{u.JobroleSectorType}}</td>
+                                    <td>{{u.SectorName}}</td>
+                                    <td>{{u.TrainingType}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <h2 class="page-header"><span>TC/TP Details</span></h2>
+                        <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Centre Name </th>
+                                    <th>Tc State</th>
+                                    <th>Tc District</th>
+                                    <th>Latitude</th>
+                                    <th>Longitude</th>
+                                    <th>Tc Address </th>
+                                    <th>Partner Name</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ng-cloak" ng-repeat="u in assessmentDetailList track by $index">
+                                    <td>{{u.CentreName}}</td>
+                                    <td>{{u.TcState}}</td>
+                                    <td>{{u.TcDistrict}}</td>
+                                    <td>{{u.TCLatitude}}</td>
+                                    <td>{{u.TCLongitude}}</td>
+                                    <td>{{u.TcAddress}}</td>
+                                    <td>{{u.PartnerName}}</td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <h2 class="page-header"><span>Assessor Details</span></h2>
+                        <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>DOB</th>
+                                    <th>Gender</th>
+                                    @*<th>Aadhar RefKey</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ng-cloak" ng-repeat="u in assessmentDetailList track by $index">
+                                    <td>{{u.AssessorName}}</td>
+                                    <td>{{u.AssessorEmail}}</td>
+                                    <td>{{u.DOB}}</td>
+                                    <td>{{u.Gender}}</td>
+                                    @*<td>{{u.AadharRefKey}}</td>*@
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <h2 class="page-header"><span>Reason for non-completion of assessment </span></h2>
+                        <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Reason</th>                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ng-cloak" ng-repeat="u in assessmentPendingList track by $index">
+                                    <td>{{u.Remarks}}</td>                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

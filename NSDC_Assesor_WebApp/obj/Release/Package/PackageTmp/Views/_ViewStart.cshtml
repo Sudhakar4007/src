@@ -1,0 +1,30 @@
+﻿
+@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+        if (info.LoginType == eLoginType.AGENCIES.ToString())
+        {
+            Layout = "~/Views/Shared/_AgenciesLayout.cshtml";
+        }
+        else if (info.LoginType == eLoginType.SSC.ToString())
+        {
+            Layout = "~/Views/Shared/_SSCLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}

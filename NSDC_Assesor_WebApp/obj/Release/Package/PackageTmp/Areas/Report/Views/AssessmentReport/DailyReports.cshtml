@@ -1,0 +1,258 @@
+﻿@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+    ViewBag.Title = "DailyReports";
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+        if (info.LoginType == eLoginType.AGENCIES.ToString())
+        {
+            Layout = "~/Views/Shared/_AgenciesLayout.cshtml";
+        }
+        else if (info.LoginType == eLoginType.SSC.ToString())
+        {
+            Layout = "~/Views/Shared/_SSCLayout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+<script src="~/Areas/Report/Script/DailyReports.js"></script>
+
+<h2 class="page-header"><span>Daily Assessment Reports</span></h2>
+
+<div ng-controller="DailyReports">
+    <form ng-submit="GetDailyReports()">
+        <div class="form-row">
+            <div class="col-md-4">
+                <label>Report Type</label>
+                <div>
+                    <select class="form-control" ng-model="Report_Type">
+                        <option value="" disabled="disabled">--Select --</option>
+                        <option value="AllBatch">Batch to be Assessed</option>
+                        <option value="Smoothlyend">Batch End Success</option>
+                        <option value="systemend">Batch End by System</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label>Training Type</label>
+                <div>
+                    <select class="form-control" ng-model="Training_Type">
+                        <option value="" disabled="disabled">--Select --</option>
+                        <option value="STT">Short Term Training</option>
+                        <option value="SP">Special Project</option>
+                        <option value="RPL">RPL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label>Training Date</label>
+                <div>
+                    <input type="text" id="Training_date" class="form-control" placeholder="Select Date" ng-model="Training_Date" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group text-center">
+            <button class="btn btn-primary" type="submit" ng-submit="GetDailyReports()">Search</button>
+            <button class="btn btn-danger">Clear</button>
+
+        </div>
+    </form>
+
+
+
+    <div class="card mb-3" ng-show="!modal1"  >
+        <div class="table-responsive" ng-show="Report_Type=='AllBatch'" >
+            <div ng-show="DailyReport.length>0">
+                <div>
+                    <a ng-click="ExportData()" href="javascript:;" class="btn btn-primary">
+                        <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                    </a>
+                    <a ng-click="" href="javascript:;" class="btn btn-primary">
+                        <i class="fa fa-file-pdf" aria-hidden="true"></i>
+                    </a>
+                    <a onclick="printDiv()" href="javascript:;" class="btn btn-primary">
+                        <i class="fa fa-print" aria-hidden="true"></i>
+                    </a>
+                    @*<input type="button" value="click" onclick="printDiv()">*@
+                </div>
+
+                <table class="table table-bordered" width="100%" cellspacing="0" id="GFG"  datatable="ng">
+                    <thead>
+                        <tr style="border:solid 1px #000">
+                            <th>S.No</th>
+                            <th>Sector Name</th>
+                            <th>Smart Centre Batch ID</th>
+                            <th>Batch Name</th>
+                            <th>Partner Name</th>
+                            <th>SCCentreID</th>
+                            <th>Centre Name</th>
+                            <th>Tc State</th>
+                            <th>Tc District</th>
+                            <th>Tc Address</th>
+                            <th>TC latitude</th>
+                            <th>TC longitude</th>
+                            <th>Batch Start Date</th>
+                            <th>Batch End Date</th>
+                            <th>Prefered Assessment Date</th>
+                            <th>Job Role</th>
+                            <th>Job role Sector Type</th>
+                            <th>SC Agency Name</th>
+                            <th>Assessor Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="dr in DailyReport track by $index">
+                            <td>{{$index+1}}</td>
+                            <td>{{dr.SectorName}}</td>
+                            <td>{{dr.SmartCentreBatchID}}</td>
+                            <td>{{dr.BatchName}}</td>
+                            <td>{{dr.PartnerName}}</td>
+                            <td>{{dr.SCCentreID}}</td>
+                            <td>{{dr.CentreName}}</td>
+                            <td>{{dr.TcState}}</td>
+                            <td>{{dr.TcDistrict}}</td>
+                            <td>{{dr.TcAddress}}</td>
+                            <td>{{dr.TClatitude}}</td>
+                            <td>{{dr.TClongitude}}</td>
+                            <td>{{dr.BatchStartDate}}</td>
+                            <td>{{dr.BatchEndDate}}</td>
+                            <td>{{dr.PreferedAssessmentDate}}</td>
+                            <td>{{dr.JobRole}}</td>
+                            <td>{{dr.JobroleSectorType}}</td>
+                            <td>{{dr.SCAgencyName}}</td>
+                            <td>{{dr.AssessorName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-responsive" ng-show="Report_Type=='Smoothlyend' || Report_Type=='systemend'">
+            <div ng-show="DailyReport.length>0">
+                <div>
+                    <a ng-click="ExportDatas()" href="javascript:;" class="btn btn-primary">
+                        <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                    </a>
+                    <a ng-click="" href="javascript:;" class="btn btn-primary">
+                        <i class="fa fa-file-pdf" aria-hidden="true"></i>
+                    </a>
+                    <a ng-click="" href="javascript:;" class="btn btn-primary">
+                        <i class="fa fa-print" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+                <table class="table table-bordered" width="100%" cellspacing="0" id="GFG"  datatable="ng">
+                    <thead>
+                        <tr>
+                            <th>Sector Name</th>
+                            <th>Smart Centre Batch ID</th>
+                            <th>Batch Name</th>
+                            <th>StartAssessment</th>
+                            <th>StartAssessmentDate</th>
+                            <th>StartAssessmentLatitude</th>
+                            <th>StartAssessmentlongitude</th>
+                            <th>EndAssessment</th>
+                            <th>EndAssessmentDate</th>
+                            <th>EndAssessmentLatitude</th>
+                            <th>EndAssessmentLongitude</th>
+                            <th>Duration</th>
+                            <th>DurationImMin</th>
+                            <th>PartnerName</th>
+                            <th>SCCentreID</th>
+                            <th>CentreName</th>
+                            <th>TcState</th>
+                            <th>TcDistrict</th>
+                            <th>TcAddress</th>
+                            <th>TClatitude</th>
+                            <th>TClongitude</th>
+                            <th>BatchStartDate</th>
+                            <th>BatchEndDate</th>
+                            <th>PreferedAssessmentDate</th>
+                            <th>JobRole</th>
+                            <th>JobroleSectorType</th>
+                            <th>SCAgencyName</th>
+                            <th>AssessorName</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="dr in DailyReport track by $index">
+                            <td>{{dr.SectorName}}</td>
+                            <td>{{dr.SmartCentreBatchID}}</td>
+                            <td>{{dr.BatchName}}</td>
+                            <td>{{dr.StartAssessment}}</td>
+                            <td>{{dr.StartAssessmentDate}}</td>
+                            <td>{{dr.StartAssessmentLatitude}}</td>
+                            <td>{{dr.StartAssessmentlongitude}}</td>
+                            <td>{{dr.EndAssessment}}</td>
+                            <td>{{dr.EndAssessmentDate}}</td>
+                            <td>{{dr.EndAssessmentLatitude}}</td>
+                            <td>{{dr.EndAssessmentLongitude}}</td>
+                            <td>{{dr.Duration}}</td>
+                            <td>{{dr.DurationInMin}}</td>
+                            <td>{{dr.PartnerName}}</td>
+                            <td>{{dr.SCCentreID}}</td>
+                            <td>{{dr.CentreName}}</td>
+                            <td>{{dr.TcState}}</td>
+                            <td>{{dr.TcDistrict}}</td>
+                            <td>{{dr.TcAddress}}</td>
+                            <td>{{dr.TClatitude}}</td>
+                            <td>{{dr.TClongitude}}</td>
+                            <td>{{dr.BatchStartDate}}</td>
+                            <td>{{dr.BatchEndDate}}</td>
+                            <td>{{dr.PreferedAssessmentDate}}</td>
+                            <td>{{dr.JobRole}}</td>
+                            <td>{{dr.JobroleSectorType}}</td>
+                            <td>{{dr.SCAgencyName}}</td>
+                            <td>{{dr.AssessorName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#Training_date").datepicker({
+            format: 'YYYY/MM/DD'
+
+        });
+       
+    });
+</script>
+
+<script>
+    function printDiv() {
+        var divContents = document.getElementById("GFG").innerHTML;
+        var a = window.open('', '');
+        a.document.write('<html>');
+        a.document.write('<body > <br>');
+        a.document.write('<table style="border:solid 1px #000">');
+        a.document.write('<tr style="border:solid 1px #000">');
+        a.document.write(divContents);
+        a.document.write('</tr>');
+        a.document.write('</table>');
+        a.document.write('</body></html>');
+        a.document.close();
+        a.print();
+
+
+    }
+</script> 

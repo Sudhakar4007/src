@@ -1,0 +1,206 @@
+﻿@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+
+    }
+
+
+
+<ul class="sidebar navbar-nav sidebar-navigation">
+    <li class="nav-item">
+        <a class="nav-link" href="/Home/Index">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    @if (info != null && (info.LoginType == eLoginType.ADMIN.ToString() || info.LoginType == eLoginType.SUPERADMIN.ToString()))
+    {
+
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup1">
+                <i class="fas fa-fw fa-user"></i>
+                <span>User Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup1">
+                <li><a href="/AgencyManagement/ManageAgency"><i class="fa fa-circle" aria-hidden="true"></i> Manage Agency</a></li>
+                <li><a href="/UserManagement/ManageUserManagement"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessor</a></li>
+                @if (info != null && info.LoginType == eLoginType.SUPERADMIN.ToString())
+                {
+                    @*<li><a href="/UserManagement/ManageAdminManagement"><i class="fa fa-circle" aria-hidden="true"></i> Manage Admin</a></li>*@
+                    <li><a href="/AgencyManagement/SectorSkillCouncil"><i class="fa fa-circle" aria-hidden="true"></i> Manage SSC</a></li>
+                }
+            </ul>
+        </li>
+
+        @*<li class="nav-item w-sub-menu">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroupMaster">
+                    <i class="fas fa-fw fa-cogs"></i>
+                    <span>Master</span>
+                </a>
+                <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroupMaster">
+                    <li><a href="/Master/StateMaster"><i class="fa fa-circle" aria-hidden="true"></i> State </a></li>
+                    <li><a href="/Master/DistrictMaster"><i class="fa fa-circle" aria-hidden="true"></i> District</a></li>
+                    <li><a href="/Master/SectorMaster"><i class="fa fa-circle" aria-hidden="true"></i> Sector</a></li>
+                    <li><a href="/Master/JobRoleMaster"><i class="fa fa-circle" aria-hidden="true"></i> Job Role</a></li>
+
+                </ul>
+            </li>*@
+
+
+        @*<li class="nav-item w-sub-menu">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup2">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Training Partner Management</span>
+                </a>
+                <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup2">
+                    <li><a href="/TrainingPartnerManagement/ManageTrainingPartner"><i class="fa fa-circle" aria-hidden="true"></i> Manage Training Partner</a></li>
+                    <li><a href="/TrainingCenterManagement/ManageTrainingCenter"><i class="fa fa-circle" aria-hidden="true"></i> Manage Training Center</a></li>
+
+                </ul>
+            </li>*@
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup3">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Assessment Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup3">
+                <li><a href="/AssessmentManagement/ManageAssessment"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessment</a></li>
+                <li><a href="/AssessmentManagement/UploadAssessment"><i class="fa fa-circle" aria-hidden="true"></i> Upload Assessment</a></li>
+                <li><a href="/AssessmentManagement/PendingEndAssessment"><i class="fa fa-circle" aria-hidden="true"></i>End Ongoing Assessment</a></li>
+                <li><a href="/AgencyManagement/UpdateAssessment"><i class="fa fa-circle" aria-hidden="true"></i>Update Assessment</a></li>
+                <li><a href="/AgencyManagement/UpdateEndStatus"><i class="fa fa-circle" aria-hidden="true"></i>Update End Status</a></li>
+                <li><a href="/AgencyManagement/UpdateRefKey"><i class="fa fa-circle" aria-hidden="true"></i>Update RefKey</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item w-sub-menu">
+
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup4">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Report</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup4">
+                @*<li><a href="/Home/UnderDevelopment"><i class="fa fa-circle" aria-hidden="true"></i> Training Partner Report</a></li>
+        <li><a href="/Home/UnderDevelopment"><i class="fa fa-circle" aria-hidden="true"></i> Training Center Report</a></li>*@
+                <li><a href="/Report/AssessmentReport/AssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i> Completed Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/PendingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Pending Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/UpcomingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Scheduled/Upcoming Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/OngoingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Ongoing Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/DailyReports"><i class="fa fa-circle" aria-hidden="true"></i>Daily Report</a></li>
+            </ul>
+        </li>
+    }
+    else if (info.LoginType == eLoginType.AGENCIES.ToString())
+    {
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup1">
+                <i class="fas fa-fw fa-user"></i>
+                <span>User Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup1">
+                <li><a href="/UserManagement/ManageUserManagement"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessor</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup3">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Assessment Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup3">
+                <li><a href="/AssessmentManagement/ManageAssessment"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessment</a></li>
+            </ul>
+        </li>
+        <li class="nav-item w-sub-menu">
+
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup4">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Report</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup4">
+                <li><a href="/Report/AssessmentReport/AssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i> Completed Report</a></li>
+                <li><a href="/Report/AssessmentReport/PendingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Pending Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/UpcomingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Scheduled/Upcoming Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/OngoingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Ongoing Assessment</a></li>
+            </ul>
+        </li>
+
+    }
+    else if (info.LoginType == eLoginType.SSC.ToString() && info.FirstName != "IBM")
+    {
+
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup1">
+                <i class="fas fa-fw fa-user"></i>
+                <span>User Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup1">
+                <li><a href="/AgencyManagement/ManageAgency"><i class="fa fa-circle" aria-hidden="true"></i> Manage Agency</a></li>
+                <li><a href="/UserManagement/ManageUserManagement"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessor</a></li>
+
+            </ul>
+        </li>
+
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup3">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Assessment Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup3">
+                <li><a href="/AssessmentManagement/ManageAssessment"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessment</a></li>
+            </ul>
+        </li>
+        <li class="nav-item w-sub-menu">
+
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup4">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Report</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup4">
+                <li><a href="/Report/AssessmentReport/AssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i> Completed Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/PendingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Pending Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/UpcomingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Scheduled/Upcoming Assessment</a></li>
+                <li><a href="/Report/AssessmentReport/OngoingAssessmentReport"><i class="fa fa-circle" aria-hidden="true"></i>Ongoing Assessment</a></li>
+            </ul>
+        </li>
+
+    }
+    else if (info.LoginType == eLoginType.SSC.ToString() && info.FirstName == "IBM")
+    {
+
+
+
+        <li class="nav-item w-sub-menu">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target="#subMenuGroup3">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Assessment Management</span>
+            </a>
+            <ul class="sub-menu collapse" aria-labelledby="subMenu" id="subMenuGroup3">
+                <li><a href="/AssessmentManagement/ManageAssessment"><i class="fa fa-circle" aria-hidden="true"></i> Manage Assessment</a></li>
+            </ul>
+        </li>
+       
+    }
+</ul>
+ }
+<script>
+    $(function () {
+        var current = location.pathname;
+        $('.w-sub-menu a, .sidebar-navigation > li > a').each(function () {
+            var $this = $(this);
+            // if the current path is like this link, make it active
+            if ($this.attr('href').indexOf(current) !== -1) {
+                $(this).parent().addClass('active');
+                $(this).parent().parent().toggleClass('show');
+                //$(this).addClass('active');
+            }
+        });
+    });
+</script>

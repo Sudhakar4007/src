@@ -1,0 +1,389 @@
+﻿@{
+    ViewBag.Title = "Manage Assessor";
+}
+
+@using NSDC.Assessor.Utility;
+@using NSDC.Assessor.BusinessObject.UserAccount;
+
+@{
+    UserInfo info = new UserInfo();
+
+    if (Session["UserInfo"] != null)
+    {
+        info = (UserInfo)Session["UserInfo"];
+
+
+    }
+}
+<script src="~/Scripts/UserManagement/ManageUserManagementController.js"></script>
+
+<div ng-app="app" ng-controller="ManageUserManagementController">
+    <div ng-show="!Isshown">
+        <h2 class="page-header" ng-hide="isHidediv" ng-show="!modal1"><span>Manage Assessor</span></h2>
+    </div>
+    <input hidden type="text" id="logintype" name="name" value="@(info.LoginType)" />
+    <input hidden type="text" id="id" name="id" value="@(info.Id)" />
+    <input hidden type="text" id="agencyId" name="agencyId" value="@(info.AgencyId)" />
+    <input hidden type="text" id="refSectorID" name="refSectorID" value="@(info.RefSectorID)" />
+    @*@if (info != null && (info.LoginType != eLoginType.AGENCIES.ToString()))
+        {*@
+    <div ng-hide="isHidediv">
+        <div ng-show="!Isshown">
+
+            <form ng-show="!modal1">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <label for="agencyAddress">Sector Name</label>
+                            <div class="">
+                                @if (info.LoginType.ToUpper() == "SSC")
+                                {
+                                    <select id="sectorName" ng-disabled="isDisabled" class="form-control" ng-model="User.RefSectorID">
+                                        <option ng-repeat="value in SectorDDLList" value="{{value.ID}}">{{value.Name}}</option>
+                                    </select>
+                                }
+                                else
+                                {
+
+                                    <select type="text" ng-disabled="isViewMode" id="sectorName" ng-model="User.RefSectorID" ng-options="value.ID as value.Name for (key, value) in SectorDDLList" ng-change="BindAgencyDropdown(User.RefAgencyID)" class="form-control">
+                                        <option value="">--Select --</option>
+                                    </select>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="RefAgencyID">Agency Name</label>
+                            <div>
+                                @if (info.LoginType.ToUpper() == "AGENCIES")
+                                {
+                                    <select id="RefAgencyID" class="form-control" ng-disabled="isViewMode" ng-model="User.RefAgencyID">
+                                        <option ng-repeat="value in AgencyDDLList" value="{{value.ID}}">{{value.Name}}</option>
+                                    </select>
+                                }
+                                else
+                                {
+                                    <select id="RefAgencyID" class="form-control" ng-disabled="isViewMode" ng-model="User.RefAgencyID" ng-options="value.ID as value.Name for (key, value) in AgencyDDLList">
+                                        <option value="">--Select --</option>
+                                    </select>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <label for="Name">Name</label>
+                            <div>
+                                <input type="text" id="Name" ng-disabled="isViewMode" only-Letters-Input maxlength="100" class="form-control" ng-model="User.Name" placeholder="Name" autofocus="autofocus">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputEmail">Email address</label>
+                            <div>
+                                <input type="email" ng-disabled=" isViewMode" id="inputEmail" maxlength="100" class="form-control" ng-model="User.Email" placeholder="Email address">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <label for="mobile">Mobile</label>
+                            <div>
+                                <input type="text" id="mobile" ng-disabled="isViewMode" mobile maxlength="10" class="form-control" ng-model="User.Mobile" placeholder="Mobile">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="DOB">Date of Birth</label>
+                            <div>
+                                <input type="text" ng-disabled="isViewMode" datepicker ng-model="User.DateOfBirth" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-6">
+                            <label for="mobile">Gender</label>
+                            <div>
+                                <input name="gender" ng-disabled=" isViewMode" type="radio" ng-model="User.Gender" value="Male">&nbsp; Male
+                                <input name="gender" ng-disabled=" isViewMode" type="radio" ng-model="User.Gender" value="Female">&nbsp; Female
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-primary" ng-show="Logintype=='SUPERADMIN'?true:false" ng-click="SaveDetails()">Register</button>
+                    <button class="btn btn-danger" ng-click="Closed()">Clear</button>
+                    <a ng-click="exportData()" href="javascript:;" class="btn btn-primary">
+                        <i class="fas  fa-file-excel" aria-hidden="true"></i>
+                    </a>
+                    <button class="btn btn-primary" ng-show="Logintype=='SUPERADMIN'?true:false" ng-click="Upload()">Upload File</button>
+                    <button class="btn btn-primary" ng-click="Search(User.RefAgencyID,User.Name,User.Email,User.Email,User.Mobile,User.DateOfBirth)">Search</button>
+                </div>
+            </form>
+        </div>
+        <div ng-show="Isshown">
+            <h2 class="page-header"><span>Upload Assessor</span></h2>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <div class="group">
+                            <label>Select File</label>
+                            <div class="clearfix"></div>
+                            <input type="file" id="fileUpload" name="file" class="inputMaterial" />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <input type="button" class="btn btn-primary" ng-click="HideDiv()" value="Back" />
+                <button class="btn btn-primary" ng-hide="isViewMode" ng-click="UploadFile()">Upload</button>
+                <button class="btn btn-primary" ng-click="Close()">Clear</button>
+                <input type="button" class="btn btn-primary" ng-click="DownloadFile('/DMS/Download/UserManagement/Document_Sample_UserManagement.csv')" value="Download File Formate" />
+            </div>
+        </div>
+    </div>
+    @*}*@
+    <div class="modal fade" id="assessorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Write reason for block/unblock.</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="col-md-8">
+                    <label for="Reason">Reason</label>
+                    <div>
+                        <input type="text" id="Reason" only-Letters-Input maxlength="100" class="form-control" ng-model="UserDetails.Reason" placeholder="Reason" required autofocus="autofocus">
+                    </div>
+                </div>
+                @*<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>*@
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" ng-hide="isModalHide" ng-click="SaveUserDetals()">Save</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3" ng-hide="isHidediv" ng-show="!modal1">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" datatable="ng" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th ng-show="Logintype=='SUPERADMIN'?true:false"><input type="checkbox" ng-click="toggleAll()" ng-model="selectedAll" />Select all</th>
+                            <th>Name</th>
+                            <th>Agency Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Gender</th>
+                            <th>Sector Name</th>
+                            <th>Assessor ID</th>
+                            @*<th>Date of Birth</th>*@
+                            @*<th>Send Mail</th>*@
+                            <th style="width:10%">
+                                Status
+                            </th>
+                            <th style="width:10%">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in agencylist track by $index">
+                            <td ng-show="Logintype=='SUPERADMIN'?true:false"><input type="checkbox" name="cbAgency" id="cb_{{u.UserId}}" class="checkagency" ng-model="u.Selected" value="{{u.ID}}" ng-click="SelectAgency(u.UserId)"></td>
+                            <td>{{u.Name}}</td>
+                            <td>{{u.AgencyName}}</td>
+                            <td>{{u.Email}}</td>
+                            <td>{{u.Mobile}}</td>
+                            <td>{{u.Gender}}</td>
+                            <td>{{u.SectorName}}</td>
+                            <td>{{u.AssessorUsernameID}}</td>
+                            @*<td>{{u.DateOfBirth}}</td>*@
+                            @*<td><a href="javascript:void(0)" title="Send Mail" ng-click="AssessorCreationMail(u.ID)" class="actn">Send</a></td>*@
+                            <td nowrap>
+                                <div ng-if="u.Status">
+                                    <div ng-show='(Logintype == "AGENCIES" )'>
+                                        <i class="fa fa-unlock-alt green" aria-hidden="true"> Unblocked </i>
+
+                                    </div>
+                                    <div ng-show='(Logintype != "AGENCIES" )'>
+                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#assessorModal" ng-click="AgencyModal(u.ID,'Block')" title="Click to Block">
+                                            <i class="fa fa-unlock-alt green" aria-hidden="true"> Unblocked </i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div ng-if="!u.Status">
+                                    <div ng-show='( Logintype =="SUPERADMIN")'>
+                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#assessorModal" ng-click="AgencyModal(u.ID,'Unblock')" title="Click to Unblock"><i class="fa fa-lock red" aria-hidden="true"> Blocked</i></a>
+                                    </div>
+                                    <div ng-show='(Logintype == "SSC" ||  Logintype == "AGENCIES" )'>
+                                        <i class="fa fa-lock red" aria-hidden="true"> Blocked</i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" title="View" data-target="#modal1" ng-click="Edit(u,'')" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                @*<a href="javascript:void(0)" title="View" data-target="#modal1" ng-click="EditContent(u.ID)" class="actn"><i class="fa fa-eye" aria-hidden="true"></i></a>*@
+                                <a href="javascript:void(0)" title="Edit" ng-hide="hidebutton" ng-click="Edit(u,'Edit')" class="actn"><i class='fas fa-pencil-alt' aria-hidden='true'></i></a>
+                                <a href="javascript:void(0)" ng-hide="hidebutton" ng-click="OperactionAgency(u.ID,'Delete')" title="Click to Delete" class="actn actn-del"><i class='fa fa-trash' aria-hidden='true'></i></a>
+                                <a href="javascript:void(0)" title="View Assessor Details" data-target="#modal1" ng-click="ViewDetails(u)" class="actn"><i class="fa fa-address-book" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div ng-show="modal1" ng-init="GetAllAgenciesAssessmentList(0);">
+        <div id="modal1">
+            <h2 class="page-header"><span>Agency Details</span></h2>
+            <form>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <label for="RefAgencyID">Agency Name</label>
+                            {{AgencyDetails.AgencyName}}
+                        </div>
+                        <div class="col-md-4">
+                            <label for="Name">Assessor Name</label>
+                            {{AgencyDetails.Name}}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <label for="inputEmail">Email address</label>
+                            {{AgencyDetails.Email}}
+                        </div>
+                        <div class="col-md-4">
+                            <label for="mobile">Mobile</label>
+                            {{AgencyDetails.Mobile}}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <a class="btn btn-primary" href="@Url.Action("ManageUserManagement","UserManagement")">Back</a>
+
+                </div>
+
+            </form>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Assessment Date</th>
+                                <th>TC Name</th>
+                                <th>TP Name</th>
+                                <th>SC CentreID</th>
+                                <th>Batch Name</th>
+                                <th>Total Trainee</th>
+                                <th>Tc State</th>
+                                <th>Tc District</th>
+                                <th>Start Assessment</th>
+                                <th>Start Assessment Date</th>
+                                <th>Start Assessment Latitude</th>
+                                <th>Start Assessment longitude</th>
+                                <th>End Assessment</th>
+                                <th>End Assessment Date</th>
+                                <th>End Assessment Latitude</th>
+                                <th>End Assessment Longitude</th>
+                            </tr>
+                        </thead>
+                        @*<tfoot>
+                                <tr>
+                                    <th>AssessmentDate</th>
+                                    <th>TC_Name</th>
+                                    <th>TP_Name</th>
+                                    <th>SCCentreID</th>
+
+                                </tr>
+                            </tfoot>*@
+                        <tbody>
+                            <tr class="ng-cloak" ng-repeat="u in assessmentlist track by $index">
+                                <td>{{u.AssessmentDate}}</td>
+                                <td>{{u.TC_Name}}</td>
+                                <td>{{u.TP_Name}}</td>
+                                <td>{{u.SCCentreID}}</td>
+                                <td>{{u.BatchName}}</td>
+                                <td>{{u.SumofTotalTraineesinthebatch}}</td>
+                                <td>{{u.TcState}}</td>
+                                <td>{{u.TcDistrict}}</td>
+                                <td>{{item.StartAssessment}}</td>
+                                <td>{{item.StartAssessmentDate}}</td>
+                                <td>{{item.StartAssessmentLatitude}}</td>
+                                <td>{{item.StartAssessmentlongitude}}</td>
+                                <td>{{item.EndAssessment}}</td>
+                                <td>{{item.EndAssessmentDate}}</td>
+                                <td>{{item.EndAssessmentLatitude}}</td>
+                                <td>{{item.EndAssessmentLongitude}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-hide="!isHidediv">
+        <h2 class="page-header"><span>Assessor Block/Unblock Reason</span></h2>
+        <a class="btn btn-primary" href="@Url.Action("ManageUserManagement","UserManagement")">Back</a>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+
+                            <th>S.No.</th>
+                            <th>Assessor Name</th>
+                            <th>Bloker Details</th>
+                            <th>Reason</th>
+                            <th>Date time</th>
+                            <th>Action type</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="ng-cloak" ng-repeat="u in assessmentlist1 track by $index">
+                            <td> {{$index+1}}</td>
+                            <td>{{u.AssessorName}}</td>
+                            <td>{{u.Name}}-{{u.LoginType}}</td>
+                            <td>{{u.Reason}}</td>
+                            <td>{{u.DateTimes}}</td>
+                            <td>{{u.ActionType}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group text-center" @*ng-hide="isHidediv"*@ ng-show="Logintype=='SUPERADMIN'?true:false">
+        <button class="btn btn-primary" ng-hide="isModalHide" ng-click="SendMail()">Send</button>
+    </div>
+</div>

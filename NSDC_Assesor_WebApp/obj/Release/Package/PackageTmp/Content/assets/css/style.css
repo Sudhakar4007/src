@@ -1,0 +1,329 @@
+.sidebar-toggled .container.body-content{width: 100%; max-width: 1350px;}
+.form-control:focus{box-shadow: 0 0 2px 0.1rem rgba(0,123,255,.25);}
+.container.body-content{overflow-x: hidden;}
+/*.sub-menu.active{display: block;}*/
+.sub-menu li.active a{color: #fff;}
+.admin-header{height: 50px;}
+.dashboard-counts {font-size: 25px !important;color: #fff;font-weight: 800 !important;}
+#sidebarToggle{font-size: 20px;}
+.header-logo{height: 60px;overflow: hidden;margin-top: 8px;padding: 0;display: inline-block;}
+.header-logo img{max-width: 105px;}
+.form-group label{font-weight: 500;}
+table thead{background: #007cc3;color: #fff;}
+.btn-primary{background-color: #017cc3;border-color: #007bff;}
+.body-content{padding: 10px 15px 50px;}
+body.sidebar-toggled footer.sticky-footer{width: 100%;}
+.sidebar .nav-item .nav-link{padding: 10px 5px;}
+.sidebar .nav-item .nav-link span{font-size: 13px;}
+.card .card-head{font-size: 16px;font-weight: 500;}
+.sidebar.toggled {overflow: unset;width: 0px !important;}
+.sub-menu{padding-left: 25px;}
+.sub-menu li{list-style-type: none;}
+.sub-menu li a i{font-size: 8px;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}
+.sub-menu li a{color: #fff;text-decoration: none;font-size: 14px;color: rgba(255, 255, 255, 0.5);padding: 6px 0 6px 15px;display: inline-block;width: 100%;position: relative;}
+
+            .sub-menu li a:hover {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.75);
+            }
+.back-button {
+    float: right;
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+    color: #fff !important;
+}
+.card-1 {
+    background: #007bff;
+}
+.card-2 {
+    background: #6610f2;
+}
+.card-3 {
+    background: #6f42c1;
+}
+.card-4 {
+    background: #e83e8c;
+}
+.card-5 {
+    background: #dc3545;
+}
+.card-6 {
+    background: #fd7e14;
+}
+.card-7 {
+    background: #ffc107;
+}
+.card-8 {
+    background: #28a745;
+}
+.card-9 {
+    background: #20c997;
+}
+.card-10 {
+    background: #17a2b8;
+}
+.w-sub-menu > a {
+    position: relative;
+}
+
+    .w-sub-menu > a:after {
+        content: '\002B';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-weight: bold;
+    }
+
+.w-sub-menu a[aria-expanded="true"]:after {
+    content: '\2212';
+}
+.customized .card-header .card-link {
+    color: #333;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    font-weight: 500;
+}
+
+    .customized .card-header .card-link h4 {
+        font-size: 16px;
+        margin: 0px;
+    }
+
+    .customized .card-header .card-link[aria-expanded="false"]:after {
+        position: absolute;
+        content: "\25E2";
+        top: 0;
+        right: 0;
+        transform: rotate(45deg);
+        transition: .5s;
+        font-size: 12px;
+    }
+
+    .customized .card-header .card-link[aria-expanded="true"]:after {
+        position: absolute;
+        content: "\25E2";
+        top: 0;
+        right: 0;
+        transform: rotate(-135deg);
+        transition: .5s;
+        font-size: 12px;
+    }
+
+.customized .card {
+    margin-bottom: -2px;
+}
+
+.page-title-wrap {
+    width: 100%;
+    background: #0989d2 url(../img/pattern-bg.png) repeat-x;
+    height: 100px;
+    padding: 25px 0;
+    margin-bottom: 30px;
+}
+
+    .page-title-wrap h2 {
+        color: #fff;
+    }
+
+
+.page-header {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    margin: 0px 0 20px;
+}
+
+    .page-header:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: 17px;
+        left: 0;
+        background: #ced4da;
+    }
+
+    .page-header span {
+        background: #fff;
+        z-index: 1;
+        display: inline-block;
+        padding: 0 20px;
+        position: relative;
+    }
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.dashboard-stats > div {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.dashboard-stats .card-body {
+    padding: 6px 10px;
+}
+
+.dashboard-stats .card-footer {
+    padding: 6px 10px;
+    position: relative;
+}
+
+    .dashboard-stats .card-footer:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.1);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+.logo-wrapper a img {
+    max-width: 150px;
+}
+
+.logo-wrapper {
+    margin-top: 35px;
+}
+/*** Design changes for Agency Login ***/
+.agency-in .admin-header {background: #007cc3;}
+
+.agency-in .agency-title {
+    color: #fff;
+}
+
+.agency-in .sidebar {
+    background-color: #007cc3;
+}
+
+.agency-in .header-logo {
+    border-bottom: 1px solid #007cc3;
+}
+ 
+/*** Design changes for Agency Login End ***/
+/*****  -- Responsive media queries for small devices -- *****/
+@media only screen and (max-width: 767px) {
+    .sub-menu {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .sub-menu li {
+        text-align: left;
+        padding-left: 25px;
+    }
+
+        .sub-menu li a {
+            font-size: 10px;
+        }
+
+    .form-group .form-label-group {
+        margin-bottom: 10px;
+    }
+
+    .page-header:after {
+        content: unset;
+    }
+
+    .page-header {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .page-title-wrap h2 {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .page-title-wrap {
+        height: 70px;
+    }
+
+    .customized .card-header .card-link h4 {
+        font-size: 14px;
+    }
+
+    .customized .card-header .card-link[aria-expanded="false"]:after, .customized .card-header .card-link[aria-expanded="true"]:after {
+        right: -13px;
+    }
+
+    .header-logo img {
+        max-width: 100px;
+    }
+
+    .sidebar-navigation {
+        position: absolute;
+        z-index: 999;
+        top: 50px;
+        left: -250px;
+        width: 250px !important;
+        transition: .3s;
+    }
+
+        .sidebar-navigation.toggled {
+            width: 250px !important;
+            left: 0px;
+            transition: .3s;
+        }
+
+    .sidebar .nav-item .nav-link {
+        text-align: left;
+        width: 100%;
+    }
+
+        .sidebar .nav-item .nav-link span {
+            display: inline-block;
+        }
+
+    .header-logo {
+        margin-left: -15px !important;
+        margin-top: 15px;
+    }
+
+    .btn {
+        margin-bottom: 5px;
+    }
+
+    footer.sticky-footer {
+        width: 100%;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .display-4 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .agency-in .header-logo {
+        border-bottom: none;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+    .header-logo {
+        margin-left: 0px !important;
+    }
+}
+
+.image-st {
+    width: 60px;
+    height: 45px;
+    padding: 0px;
+    margin: -10px;
+}
